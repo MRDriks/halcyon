@@ -359,3 +359,67 @@ p {
         margin: 25px 0 30px;
     }
 }
+
+.subscribe {
+    background: url('../img/subscribe-bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+    position: relative;
+    z-index: 5;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(34, 33,43, 0.7);
+    }
+}
+.subscribe__wrapper {
+    @extend %column-center-alignment;
+    padding: 120px 0 150px;
+    position: relative;
+    z-index: 10;
+
+    h2 {
+        color: #fff;
+        font-size: 15px;
+        letter-spacing: 2px;
+        font-weight: normal;
+        text-transform: uppercase;
+        margin: 25px 0 45px;
+    }
+
+    .circle-arrow {
+        margin: 0;
+        transform: rotate(180deg);
+        position: absolute;
+        bottom: -25px;
+        width: 50px;
+        height: 50px;
+        border-radius: 25px;
+        opacity: 0.9;
+    }
+}
+
+.email-form {
+    input {
+        height: 60px;
+        width: 350px;
+        background: transparent;
+        border: 1px solid #fff;
+    }
+
+    button {
+        padding: 21px 25px;
+        background-color: #3dc9b3;
+        color: #fff;
+        text-transform: uppercase;
+        font-size: 15px;
+        letter-spacing: 2px;
+    }
+}
+
