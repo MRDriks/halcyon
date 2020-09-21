@@ -238,6 +238,50 @@ p {
     }
 }
 
+.services-phone {
+    background-color: #f3f5f8;
+    position: relative;
+}
+
+.services-phone__wrapper {
+    img {
+        transform: translate(-125px, 0px);
+    }
+}
+
+.text-panel {
+    width: 50%;
+    height: 100%;
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding-top: 100px;
+}
+
+.text-panel__wrapper {
+    max-width: 455px;
+    margin: 0 20px 0 8%;
+
+    .section-title {
+        width: 100%;
+    }
+
+    p {
+        text-align: justify;
+        line-height: 20px;
+        font-weight: normal;
+
+        &:nth-child(2) {
+            margin-top: 45px;
+        }
+
+        &:nth-child(3) {
+            margin: 25px 0;
+        }
+    }
+}
+
 .counter {
     background: url('../img/counter-bg.jpg');
     background-repeat: no-repeat;
