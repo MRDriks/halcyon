@@ -1,6 +1,8 @@
 @import './nullstyle.scss';
 @import './fonts.scss';
 
+// General styles //
+
 %burger-line {
     display: block;
     width: 100%;
@@ -71,6 +73,29 @@ p {
         margin: 0 auto;
     }
 }
+
+.social-bar {
+    display: flex;
+    justify-content: center;
+
+    .circle {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: #242830;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 10px;
+
+        i {
+            color: #fff;
+            font-size: 16px;
+        }
+    }
+}
+
+// General styles end //
 
 .header {
     width: 100%;
@@ -307,5 +332,30 @@ p {
         border: 1px solid #fff;
         font-size: 15px;
         letter-spacing: 2px;
+    }
+}
+
+.team__wrapper {
+    @extend %column-center-alignment;
+    padding-top: 90px;
+    padding-bottom: 170px;
+}
+
+.team-items {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    .item {
+        width: 360px;
+        margin: 60px 30px;
+    }
+
+    h3 {
+        margin: 40px 0 15px;
+    }
+
+    p {
+        margin: 25px 0 30px;
     }
 }
