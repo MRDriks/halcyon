@@ -31,7 +31,7 @@
     background-attachment: fixed;
 }
 
-%absolute-fulll-size {
+%absolute-full-size {
     width: 100%;
     height: 100%;
     position: absolute;
@@ -136,11 +136,55 @@ p {
 
 // General styles end //
 
+.menu {
+    @extend %absolute-full-size;
+    @extend %column-center-alignment;
+    height: 100vh;
+    background-color: #3dc9b3;
+    transform: translateY(-100vh);
+    transition-duration: 0.5s;
+    z-index: 7;
+
+    a {
+        color: #fff;
+        text-transform: uppercase;
+        font-size: 30px;
+        margin: 25px 0;
+        font-weight: 500;
+        transition-duration: 0.3s;
+
+        &:hover {
+            color: #353535;
+        }
+    }
+}
+
+.menu.active {
+    transform: translateY(0);
+}
+
+.burger-menu.active {
+    span {
+        opacity: 0;
+    }
+
+    &::before {
+        transform: rotate(45deg);
+        top: 9px;
+    }
+
+    &::after {
+        transform: rotate(-45deg);
+        top: 9px;
+    }
+}
+
 .header {
     width: 100%;
     height: 100vh;
     background-image: url('../img/header-bg.jpg');
     @extend %parallax-effect;
+    position: relative;
 }
 
 .header__wrapper {
@@ -165,24 +209,27 @@ p {
     span {
         @extend %burger-line;
         top: 9px;
+        transition-duration: 0.3s;
     }
 
     &::before {
         content: '';
         @extend %burger-line;
         top: 0;
+        transition-duration: 0.3s;
     }
 
     &::after {
         content: '';
         @extend %burger-line;
         bottom: 0;
+        transition-duration: 0.3s;
     }
 }
 
 .header__title {
     @extend %column-center-alignment;
-    @extend %absolute-fulll-size;
+    @extend %absolute-full-size;
     z-index: 5;
 
     h1 {
@@ -319,7 +366,7 @@ p {
 
     &::before {
         content: '';
-        @extend %absolute-fulll-size;
+        @extend %absolute-full-size;
         background-color: rgba(34, 33,43, 0.8);
         z-index: 5;
     }
@@ -334,7 +381,7 @@ p {
         margin-top: 80px;
         font-size: 40px;
         letter-spacing: 10px;
-        color: #ffffff;
+        color: #fff;
         text-transform: uppercase;
         max-width: 590px;
         text-align: center;
@@ -371,7 +418,7 @@ p {
         width: 360px;
         margin: 0 20px 75px;
     }
-
+    
     p {
         font-weight: normal;
         margin-top: 30px;
@@ -438,7 +485,7 @@ p {
 
     &::before {
         content: '';
-        @extend %absolute-fulll-size;
+        @extend %absolute-full-size;
         background-color: rgba(34, 33,43, 0.7);
     }
 }

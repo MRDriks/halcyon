@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "serve": "sass src/sass/style.scss docs/css/style.min.css --watch",
     "convert-styles": "sass src/sass/style.scss docs/css/style.min.css --style compressed",
-    "minify-js": "terser src/js/main.js --compress --output build/js/main.min.js",
+    "minify-js": "terser src/js/main.js --compress --output docs/js/main.min.js",
     "build": "npm run convert-styles && npm run minify-js"
   },
   "keywords": [],
