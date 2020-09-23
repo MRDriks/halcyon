@@ -413,6 +413,7 @@ p {
 }
 
 .team-items {
+    width: 100%;
     @extend %flex-wrap-center;
 
     .item {
@@ -620,6 +621,18 @@ p {
         }
     }
 
+    .services-items {
+        width: 100%;
+
+        .item {
+            margin: 85px 0 0;
+        }
+    }
+
+    .services-phone {
+        height: 700px;
+    }
+
     .email-form { 
         flex-direction: column;
         width: 100%;
@@ -631,14 +644,36 @@ p {
         }
     }
 
-    .text-panel__wrapper {
-        padding-bottom: 100px;
-    }
-
     .ignite__wrapper {
         a {
             padding: 20px 25px;
             font-size: 13px;
         }
+    }
+
+    .portfolio__wrapper {    
+        .item, img {
+            width: 100%;
+        }
+    }
+
+    .team-items {
+        .item {
+            margin: 60px 0;
+        }
+    }
+
+    .cards-block {
+        width: 100%;
+
+        .card {
+            margin: 90px 0 0;
+        }
+    }
+}
+
+@media (max-height: 500px) {
+    .header {
+        height: 600px;
     }
 }
